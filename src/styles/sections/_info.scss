@@ -1,0 +1,103 @@
+.info {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    z-index: 1;
+    background: linear-gradient(to bottom, #17171d, #322D36);
+    opacity: 0.6;
+  }
+
+  &-top {
+    height: 640px;
+    @extend .shape-top;
+    @include background-image-single('../assets/backgrounds/top', 'png');
+    background-position: 40% 20%;
+  }
+
+  &-bottom {
+    height: 870px;
+    @include background-image-single('../assets/backgrounds/bottom', 'png');
+    background-position: 40% 20%;
+    @extend .shape-bottom;
+
+    .container{
+      .content{
+        top: 100px;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    .content {
+      position: relative;
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
+      text-align: center;
+      color: $white;
+
+      .heading-1 {
+        margin: 0.20em 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 70px;
+        font-weight: bold;
+        line-height: 70px;
+      }
+
+      .paragraph {
+        margin-bottom: 80px;
+        font-family: 'Merriweather', serif;
+        font-size: 21px;
+        line-height: 31px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .info {
+    height: 100%;
+
+    &-top {
+      min-height: 640px;
+      @include background-image-twice('../assets/titles/new_strv', 'svg', '../assets/backgrounds/top', 'png');
+      background-size: 1144px 250px, cover;
+      background-position: center bottom, center top;
+    }
+
+    &-bottom{
+      background-position: center;
+      background-size: cover;
+    }
+
+    .container {
+      .content {
+        .heading-1 {
+          font-size: 90px;
+          line-height: 90px;
+        }
+
+        .paragraph {
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

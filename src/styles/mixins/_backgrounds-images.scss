@@ -1,0 +1,44 @@
+@mixin background-image-single($path, $ext) {
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("#{$at1x_path}");
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+  all and (-o-min-device-pixel-ratio: 3/2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+    background-image: url("#{$at2x_path}");
+  }
+}
+
+@mixin background-image-twice($path1, $ext1, $path2, $ext2) {
+  $at1x_path1: "#{$path1}.#{$ext1}";
+  $at2x_path1: "#{$path1}@2x.png";
+
+  $at1x_path2: "#{$path2}.#{$ext2}";
+  $at2x_path2: "#{$path2}@2x.#{$ext2}";
+
+  background-image: url("#{$at2x_path1}"), url("#{$at2x_path2}");
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+  all and (-o-min-device-pixel-ratio: 3/2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+    background-image: url("#{$at2x_path1}"), url("#{$at2x_path2}");
+  }
+}
+
+@mixin background-image-svgpng($path) {
+  $at1x_path: "#{$path}.svg";
+  $at2x_path: "#{$path}@2x.png";
+
+  background-image: url("#{$at1x_path}");
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+  all and (-o-min-device-pixel-ratio: 3/2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+    background-image: url("#{$at2x_path}");
+  }
+}

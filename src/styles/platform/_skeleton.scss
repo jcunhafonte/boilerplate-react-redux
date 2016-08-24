@@ -1,0 +1,17 @@
+#root, .wrapper{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  ::selection {
+    background: $red;
+  }
+}
+
+button{
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+}

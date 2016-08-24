@@ -1,0 +1,25 @@
+.main-footer {
+  background: rgba(0, 0, 0, .8);
+
+  .social-list {
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: 16px;
+    color: $white;
+    text-transform: uppercase;
+
+    li{
+      padding: 0 5px;
+      display: inline-block;
+
+      a{
+        display: flex;
+      }
+    }
+  }
+}

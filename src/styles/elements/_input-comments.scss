@@ -1,0 +1,95 @@
+.input-comments {
+  margin: 60px 10px 0 10px;
+  padding: 20px;
+  box-shadow: 0 0 41px -5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .input-wrapper {
+
+    input {
+      margin-top: 30px;
+      padding-bottom: 30px;
+      width: 100%;
+      color: $gray;
+      border: none;
+      border-bottom: 1px solid $gray_border;
+      transition: border-color .3s;
+      font-family: "Merriweather", serif;
+
+      &:hover {
+        border-color: darken($gray_border, 10%);
+        outline: 0;
+      }
+
+      &:focus {
+        border-color: $red;
+        outline: 0;
+      }
+
+      &.error {
+        @include placeholder($red);
+        border-color: $red;
+      }
+    }
+  }
+
+  .button-wrapper {
+    button {
+      margin-top: 20px;
+      width: 35px;
+      height: 35px;
+      @include background-image-svgpng('../assets/icons/submit');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      transition: .3s background;
+
+      &:hover {
+        @include background-image-svgpng('../assets/icons/submit_hover');
+      }
+
+      &.error {
+        cursor: inherit;
+        @include background-image-svgpng('../assets/icons/error');
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .input-comments {
+    margin: 60px 90px 0 90px;
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+
+    form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper {
+      &:after {
+        content: ' ';
+        display: block;
+        width: 130%;
+        height: 1px;
+        background: $gray_border;
+      }
+
+      input {
+        border: none;
+      }
+    }
+
+    .button-wrapper {
+      text-align: right;
+
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.about {
+  padding: 60px 0;
+  position: relative;
+  @include background-image-svgpng('../assets/titles/handmade_group');
+  background-position: center 180px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+
+  &:before{
+    @extend .shape-middle;
+  }
+
+  .container-cards {
+    margin: 75% 10px 0 10px;
+    padding: 30px 30px 0 30px;
+    background-color: #fff;
+    box-shadow: 3px 2px 70px -14px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .about {
+    @include background-image-svgpng('../assets/titles/handmade');
+
+    &:before{
+      position: absolute;
+      top: -100px;
+      height: 100%;
+      width: 100%;
+      content: " ";
+      background: $white;
+      z-index: -2;
+    }
+
+    &:after{
+      position: absolute;
+      top: 100px;
+      content: " ";
+      height: 100%;
+      width: 100%;
+      z-index: -3;
+      background: $gray_background_light;
+    }
+
+    .container-cards {
+      margin: 120px 20px 0 20px;
+      padding: 30px 30px;
+    }
+  }
+}

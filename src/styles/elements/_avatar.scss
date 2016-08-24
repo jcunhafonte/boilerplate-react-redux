@@ -1,0 +1,9 @@
+.avatar {
+  border-radius: 50%;
+}
+
+@media (min-width: $screen-md-min) {
+  .avatar {
+    display: flex;
+  }
+}

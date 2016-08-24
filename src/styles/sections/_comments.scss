@@ -1,0 +1,11 @@
+.comments {
+  padding: 60px 0 0;
+  position: relative;
+  background: $white;
+}
+
+@media (min-width: $screen-md-min) {
+  .comments {
+    margin-top: 200px;
+  }
+}

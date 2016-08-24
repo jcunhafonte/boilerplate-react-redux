@@ -1,0 +1,34 @@
+.sub-header {
+  margin-left: 10px;
+  padding: 0 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  h2 {
+    color: $black_header;
+  }
+
+  h3 {
+    color: $gray_light;
+  }
+}
+
+
+@media (min-width: $screen-md-min) {
+  .sub-header{
+    margin: 0 90px;
+
+    h2{
+      &:after {
+        margin-top: 10px;
+        width: 3px;
+        height: 80px;
+        content: " ";
+        display: block;
+        background: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.shape-top {
+  -webkit-clip-path: polygon(100% 0, 100% 91%, 28% 100%, 0 88%, 0 0);
+  clip-path: polygon(100% 0, 100% 91%, 28% 100%, 0 88%, 0 0);
+}
+
+.shape-bottom{
+  -webkit-clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 18%, 20% 22%);
+  clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 18%, 20% 22%);
+}
+
+@media (min-width: $screen-sm-min) {
+  .shape-top {
+    -webkit-clip-path: polygon(100% 0, 100% 76%, 35% 98%, 0 75%, 0 0);
+    clip-path: polygon(100% 0, 100% 76%, 35% 98%, 0 75%, 0 0);
+  }
+
+  .shape-middle {
+    -webkit-clip-path: polygon(100% 0, 100% 76%, 35% 98%, 0 75%, 0 0);
+    clip-path: polygon(100% 0, 100% 76%, 35% 98%, 0 75%, 0 0);
+  }
+
+  .shape-bottom{
+    -webkit-clip-path: polygon(100% 8%, 100% 100%, 0 100%, 0 16%, 31% 26%);
+    clip-path: polygon(100% 8%, 100% 100%, 0 100%, 0 16%, 31% 26%);
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .shape-bottom{
+    -webkit-clip-path: polygon(100% 6%, 100% 100%, 0 100%, 0 11%, 33% 23%);
+    clip-path: polygon(100% 6%, 100% 100%, 0 100%, 0 11%, 33% 23%);
+  }
+}

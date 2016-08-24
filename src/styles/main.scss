@@ -1,0 +1,31 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:300,500,700');
+
+//NORMALIZE
+@import "vendors/normalize";
+@import "vendors/grid/grid";
+
+//MIXINS
+@import "mixins/backgrounds-images";
+@import "mixins/placeholder";
+
+//PLATFORM
+@import "platform/variables";
+@import "platform/skeleton";
+@import "platform/shape";
+@import "platform/menu";
+@import "platform/footer";
+
+//SECTIONS
+@import "sections/info";
+@import "sections/about";
+@import "sections/works";
+@import "sections/comments";
+//ELEMENTS
+@import "elements/avatar";
+@import "elements/button";
+@import "elements/sub-header";
+@import "elements/card-about";
+@import "elements/steps";
+@import "elements/input-comments";
+@import "elements/list-comments";

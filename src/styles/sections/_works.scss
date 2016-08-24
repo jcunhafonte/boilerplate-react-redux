@@ -1,0 +1,48 @@
+.works {
+  position: relative;
+  padding: 60px 0 100px 0;
+  background-color: $gray_background_light;
+
+  .container-steps {
+    text-align: center;
+  }
+
+  &-btn {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .works {
+    padding: 60px 0 300px 0;
+
+    &:before {
+      position: absolute;
+      content: " ";
+      display: block;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      @include background-image-svgpng('../assets/titles/strv_m6');
+      background-repeat: no-repeat;
+      background-position: center 82%;
+    }
+
+    &:after {
+      position: absolute;
+      content: " ";
+      height: 48%;
+      width: 100%;
+      display: block;
+      z-index: 0;;
+      @include background-image-single('../assets/backgrounds/bmw', 'png');
+      background-repeat: no-repeat;
+      background-position: center 100%;
+    }
+
+    .container-steps {
+      padding: 0 70px;
+    }
+  }
+}
