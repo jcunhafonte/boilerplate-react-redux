@@ -23,13 +23,13 @@ Considering the assets sent and the intended final design, some of the features 
 For instance, the provided image present in the inferior and superior sections has a correspondent superior and inferior triangle which needed to be much larger than the provided one, in order to adapt to different screen resolutions. Having this problem in consideration, I've decided to solve it by creating an inverted triangle shape above the image. By doing this, I keep the image from losing its identity and I also ensure its responsivity. This approach may present some compatibility issues, however it makes the image work well in every screen resolution and this was the best solution I could find for this specific problem.
 
 Briefly, to develop this project I used the following technologies:
-- REACT
-- REDUX
-- SASS
-- BABEL
-- WEBPACK
-- ESLINT
-- REDUX DEVTOOLS
+* - REACT
+* - REDUX
+* - SASS
+* - BABEL
+* - WEBPACK
+* - ESLINT
+* - REDUX DEVTOOLS
 
 Although I've been working with the FLUX architecture for some time and have explored Redux by doing some exercises, I've never developed a final product with this technology. In the last few months I've been worked with ALT and REFLUX, however I've decided to develop this project with REDUX, since it's one of the technologies you are looking for at the moment. Also I could challenge myself by learning more about this interesting technology.
 I had some doubts related with the creation of the project structure, however I've tried to develop it as a way to evolve in the REDUX structure.
